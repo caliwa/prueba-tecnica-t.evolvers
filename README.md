@@ -11,13 +11,13 @@ En este repositorio, se encuentra lo correspondiente a la prueba técnica requer
 ### · ¿Cómo ejecutar el programa?
 
 #### Primer paso:
-Disponer de un endpoint de redis (recomendable [upstash](https://app.redislabs.com/#/login) o [upstash](http://localhost/ "link title")) y configurarlo en la ruta ` prueba-tecnica-t.evolvers/PRUEBA TÉCNICA CARLOS GONZÁLEZ -T.EVOLVERS/simulador/conexion_redis.py` 
+Disponer de un endpoint de redis (recomendable [upstash](https://app.redislabs.com/#/login) o [upstash](http://localhost/ "link title")) y configurarlo en la ruta ` prueba-tecnica-t.evolvers/simulador/conexion_redis.py` 
 #### Segundo paso:
-Ejecutar el archivo microservicio_producer.py ubicado en la ruta `prueba-tecnica-t.evolvers/PRUEBA TÉCNICA CARLOS GONZÁLEZ -T.EVOLVERS/simulador/microservicio_producer.py`, antes de la Entrada de Datos en consola, abrir en paralelo 2 programas .py más (2 consolas más).
+Ejecutar el archivo microservicio_producer.py ubicado en la ruta `prueba-tecnica-t.evolvers/simulador/microservicio_producer.py`, antes de la Entrada de Datos en consola, abrir en paralelo 2 programas .py más (2 consolas más).
 
-La primera está en la ruta `prueba-tecnica-t.evolvers/PRUEBA TÉCNICA CARLOS GONZÁLEZ -T.EVOLVERS/consumer_fastapi/microservicio_consumer_almacenamiento.py `
+La primera está en la ruta `prueba-tecnica-t.evolvers/consumer_fastapi/microservicio_consumer_almacenamiento.py `
 
-La segunda en `prueba-tecnica-t.evolvers/PRUEBA TÉCNICA CARLOS GONZÁLEZ -T.EVOLVERS/consumer_notificacion/microservicio_consumer_notificacion.py`
+La segunda en `prueba-tecnica-t.evolvers/consumer_notificacion/microservicio_consumer_notificacion.py`
 #### Tercer paso:
 Ingreso de datos, en microservicio_consumer_almacenamiento.py visualizarás como los datos generados aleatoriamente se envían a través de eventos (Redis Streams) a este microservicio para posteriormente guardarlos en un esquema de la base no-sql Redis (se evidencia por consola).
 
