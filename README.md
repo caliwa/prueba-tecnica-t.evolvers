@@ -1,8 +1,5 @@
 # Prueba Técnica T-Evolvers por Carlos Alberto González A.
 
-**Tabla de Contenido**
-
-[TOC]
 ###Introducción
 En este repositorio, se encuentra lo correspondiente a la prueba técnica requeridad para la empresa T-Evolvers, que consta de la simulación de un aparato electrónico (radar de velocidad) junto a otro atributo llamado timestamp.
 
