@@ -1,42 +1,43 @@
 # Prueba Técnica T-Evolvers por Carlos Alberto González A.
 
-###Introducción
+### Introducción
 En este repositorio, se encuentra lo correspondiente a la prueba técnica requeridad para la empresa T-Evolvers, que consta de la simulación de un aparato electrónico (radar de velocidad) junto a otro atributo llamado timestamp.
 
-###· Diagrama de Diseño de Arquitectura/Comunicación
+### · Diagrama de Diseño de Arquitectura/Comunicación
 
 [![](https://i.ibb.co/3pYZygs/Diagrama-de-dise-o-de-arquitectura.jpg)](https://i.ibb.co/3pYZygs/Diagrama-de-dise-o-de-arquitectura.jpg)
 
 
-###· ¿Cómo ejecutar el programa?
+### · ¿Cómo ejecutar el programa?
 
-####Primer paso:
+#### Primer paso:
 Disponer de un endpoint de redis (recomendable [upstash](https://app.redislabs.com/#/login) o [upstash](http://localhost/ "link title")) y configurarlo en la ruta ` prueba-tecnica-t.evolvers/PRUEBA TÉCNICA CARLOS GONZÁLEZ -T.EVOLVERS/simulador/conexion_redis.py` 
-####Segundo paso:
+#### Segundo paso:
 Ejecutar el archivo microservicio_producer.py ubicado en la ruta `prueba-tecnica-t.evolvers/PRUEBA TÉCNICA CARLOS GONZÁLEZ -T.EVOLVERS/simulador/microservicio_producer.py`, antes de la Entrada de Datos en consola, abrir en paralelo 2 programas .py más (2 consolas más).
 
 La primera está en la ruta `prueba-tecnica-t.evolvers/PRUEBA TÉCNICA CARLOS GONZÁLEZ -T.EVOLVERS/consumer_fastapi/microservicio_consumer_almacenamiento.py `
 
 La segunda en `prueba-tecnica-t.evolvers/PRUEBA TÉCNICA CARLOS GONZÁLEZ -T.EVOLVERS/consumer_notificacion/microservicio_consumer_notificacion.py`
-####Tercer paso:
+#### Tercer paso:
 Ingreso de datos, en microservicio_consumer_almacenamiento.py visualizarás como los datos generados aleatoriamente se envían a través de eventos (Redis Streams) a este microservicio para posteriormente guardarlos en un esquema de la base no-sql Redis (se evidencia por consola).
 
 En microservicio_consumer_notificacion.py llegará como evento de Redis Streams la métrica que supere el umbral de 50km/h, notificando este por consola.
-####Cuarto paso:
+#### Cuarto paso:
 Todo lo generado por sesión de ejecución del microservicio_producer.py, se guardará en un CSV, para su posterior análisis.
 
-###· Reto técnico abordado
+### · Reto técnico abordado
 PRUEBA TÉCNICA DESARROLLADOR PYTHON
 
 Objetivo:
 Validar los conocimientos técnicos requeridos para el buen desempeño en el stack
 requerido para el mismo.
 - Conocimientos a evaluar:
- Python
- FastApi
- Redis
- Redis streams
- Diseño de arquitectura backend.
+Python
+FastApi
+Redis
+Redis streams
+Diseño de arquitectura backend.
+
 La prueba se dividirá en 2 partes:
 1. Simulador y comunicación entre microservicios.
 a. Simular un dispositivo eléctrico que reporte medidas de manera
