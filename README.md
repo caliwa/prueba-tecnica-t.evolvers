@@ -21,7 +21,7 @@ La segunda en `prueba-tecnica-t.evolvers/consumer_notificacion/microservicio_con
 #### Tercer paso:
 Ingreso de datos, en microservicio_consumer_almacenamiento.py visualizarás como los datos generados aleatoriamente se envían a través de eventos (Redis Streams) a este microservicio para posteriormente guardarlos en un esquema de la base no-sql Redis (se evidencia por consola).
 
-En microservicio_consumer_notificacion.py llegará como evento de Redis Streams la métrica que supere el umbral de 50km/h, notificando este por consola.
+En microservicio_consumer_notificacion.py llegará como evento de Redis Streams la métrica que supere el umbral de 50km/h, notificando este por consola. (Si desea usar el CRUD, recomendable Postman o cualquier herramienta para testear API, usando localhost y los métodos)
 #### Cuarto paso:
 Todo lo generado por sesión de ejecución del microservicio_producer.py, se guardará en un CSV, para su posterior análisis.
 
